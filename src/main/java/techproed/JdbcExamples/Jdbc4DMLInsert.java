@@ -52,7 +52,7 @@ public class Jdbc4DMLInsert {
 //	   }
 	   
 	   
-	// 2.YONTEM (addBath ve excuteBatch() metotlari ile)
+	// 2.YONTEM (addBatch ve excuteBatch() metotlari ile)
 	// ----------------------------------------------------
 	// addBatch metodu ile SQL ifadeleri gruplandirilabilir ve exucuteBatch()
 	// metodu ile veritabanina bir kere gonderilebilir.
@@ -68,7 +68,7 @@ public class Jdbc4DMLInsert {
 	   Arrays.stream(sorgular1).forEach(t -> {
 		try {
 			st.addBatch(t);                     //--> Hepsini bir top haline getiriyor
-		} catch (SQLException e) {              //--> Burasi forEach() ile de olur. Oylesine sekil sukul yaptim.
+		} catch (SQLException e) {              //--> Burasi forEach() ile de olur.
 			e.printStackTrace();
 		}
 	}); 
